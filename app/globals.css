@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --brand-pink: #FF2A85;
+  --brand-pink-hover: #E01970;
+  --brand-pink-soft: #FF60A8;
+  --brand-blue: #0052FF;
+  --brand-blue-hover: #003ECC;
+  --brand-blue-soft: #4D88FF;
+  --brand-magenta: #FF2A85;
+  --brand-magenta-hover: #E01970;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F8FA;
+  --text-primary: #0B0B0D;
+  --text-secondary: #444444;
+  --border-color: #E7E7E7;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Gradient Utilities for Electric Blue & Pink Theme */
+.text-gradient-blue-pink {
+  background: linear-gradient(135deg, #0052FF 0%, #FF2A85 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-blue-pink {
+  background: linear-gradient(135deg, #0052FF 0%, #FF2A85 100%);
+}
+
+.bg-[#0052FF] {
+  background-color: #0052FF !important;
+}
+
+/* Blueprint Grid Pattern Utilities */
+.blueprint-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+.blueprint-border {
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.blueprint-border::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--brand-blue);
+}
+
+.blueprint-border::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--brand-pink);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Dynamic Background Keyframes & Effects */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.08);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-40px, 40px) scale(1.1);
+  }
+  66% {
+    transform: translate(30px, -30px) scale(0.92);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.12);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 18s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 22s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 10s ease-in-out infinite;
+}
+
+/* Glassmorphism & Accent Glows */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(231, 231, 231, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(11, 11, 13, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glowing Ambient Orbs */
+.glow-pink-spot {
+  background: radial-gradient(circle, rgba(255, 42, 133, 0.25) 0%, rgba(255, 42, 133, 0) 70%);
+}
+
+.glow-blue-spot {
+  background: radial-gradient(circle, rgba(0, 82, 255, 0.25) 0%, rgba(0, 82, 255, 0) 70%);
+}
+
+.glow-cyan-spot {
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.2) 0%, rgba(0, 210, 255, 0) 70%);
+}
+

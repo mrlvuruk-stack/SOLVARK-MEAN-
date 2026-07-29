@@ -38,18 +38,18 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="pt-32 pb-20 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 bg-white text-[#0B0B0D]">
+    <div className="pt-28 pb-20 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 bg-white text-[#0B0B0D]">
       {/* Contact Left Column */}
       <div className="lg:col-span-5 space-y-8">
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#F8F8FA] border border-[#E7E7E7] text-xs font-mono text-[#0B0B0D]">
-            <span className="w-2 h-2 bg-[#B80357]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#F8F8FA] border border-[#E7E7E7] text-xs font-mono text-[#0052FF] font-bold">
+            <span className="w-2 h-2 bg-[#FF2A85]" />
             DIRECT ENGINEERING CONSULTATION
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight font-heading leading-tight text-[#0B0B0D]">
-            Let’s Build Something Exceptional Together
+            Let’s Build Something <span className="text-gradient-blue-pink">Exceptional Together</span>
           </h1>
-          <p className="text-[#444444] text-sm leading-relaxed font-sans">
+          <p className="text-[#222222] text-sm leading-relaxed font-sans font-normal">
             Schedule an architecture discovery session or submit your project specification. You will speak directly with principal software engineers—not sales representatives.
           </p>
         </div>
@@ -57,12 +57,12 @@ export default function ContactPage() {
         {/* Guarantees & Response Time Box */}
         <div className="space-y-4 pt-4 border-t border-[#E7E7E7]">
           <div className="p-4 bg-[#F8F8FA] border border-[#E7E7E7] space-y-2 blueprint-border">
-            <div className="text-xs font-mono text-[#B80357] font-bold">RESPONSE TIME SLA</div>
+            <div className="text-xs font-mono text-[#FF2A85] font-bold">RESPONSE TIME SLA</div>
             <div className="text-sm font-bold font-heading text-[#0B0B0D]">Guaranteed Under 24 Business Hours</div>
-            <div className="text-xs text-[#444444]">Every inquiry is assigned to a dedicated solution architect.</div>
+            <div className="text-xs text-[#333333] font-medium">Every inquiry is assigned to a dedicated solution architect.</div>
           </div>
 
-          <div className="space-y-2 text-xs text-[#444444] font-mono pt-2">
+          <div className="space-y-2 text-xs text-[#222222] font-mono font-semibold pt-2">
             <div>📍 Global Operations: San Francisco // London // Singapore</div>
             <div>📧 Direct Email: contact@solvark.com</div>
             <div>🔒 Confidentiality: Strict NDA provided upon request</div>
@@ -79,8 +79,8 @@ export default function ContactPage() {
             <div
               className={`p-4 text-xs font-mono ${
                 feedback.type === 'success'
-                  ? 'bg-emerald-500/10 text-emerald-700 border border-emerald-500/30'
-                  : 'bg-red-500/10 text-red-700 border border-red-500/30'
+                  ? 'bg-emerald-500/10 text-emerald-800 border border-emerald-500/30 font-bold'
+                  : 'bg-red-500/10 text-red-800 border border-red-500/30 font-bold'
               }`}
             >
               {feedback.message}
@@ -90,7 +90,7 @@ export default function ContactPage() {
           <form onSubmit={handleSubmit} className="space-y-4 font-sans">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-mono text-[#444444] uppercase mb-1">
+                <label className="block text-xs font-mono text-[#0B0B0D] uppercase mb-1 font-bold">
                   Full Name *
                 </label>
                 <input
@@ -98,11 +98,12 @@ export default function ContactPage() {
                   name="fullName"
                   type="text"
                   placeholder="John Doe"
-                  className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#B80357]"
+                  className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#0052FF]"
                 />
               </div>
+
               <div>
-                <label className="block text-xs font-mono text-[#444444] uppercase mb-1">
+                <label className="block text-xs font-mono text-[#0B0B0D] uppercase mb-1 font-bold">
                   Work Email *
                 </label>
                 <input
@@ -110,51 +111,67 @@ export default function ContactPage() {
                   name="email"
                   type="email"
                   placeholder="john@company.com"
-                  className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#B80357]"
+                  className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#0052FF]"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-mono text-[#444444] uppercase mb-1">
+                <label className="block text-xs font-mono text-[#0B0B0D] uppercase mb-1 font-bold">
                   Phone Number
                 </label>
                 <input
                   name="phone"
                   type="tel"
                   placeholder="+1 (555) 000-0000"
-                  className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#B80357]"
+                  className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#0052FF]"
                 />
               </div>
+
               <div>
-                <label className="block text-xs font-mono text-[#444444] uppercase mb-1">
-                  Company Name
+                <label className="block text-xs font-mono text-[#0B0B0D] uppercase mb-1 font-bold">
+                  Company / Organization
                 </label>
                 <input
                   name="companyName"
                   type="text"
-                  placeholder="Acme Enterprise"
-                  className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#B80357]"
+                  placeholder="Acme Corp"
+                  className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#0052FF]"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-mono text-[#444444] uppercase mb-1">
-                Project Scope / Technical Requirements *
+              <label className="block text-xs font-mono text-[#0B0B0D] uppercase mb-1 font-bold">
+                Service Interest
+              </label>
+              <select
+                name="serviceInterest"
+                className="w-full h-11 px-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#0052FF] bg-white cursor-pointer"
+              >
+                <option value="engineering">02 // Custom React & Next.js Engineering</option>
+                <option value="design">01 // UI/UX Architecture & Design Systems</option>
+                <option value="cloud">03 // Cloud Infrastructure & Migration</option>
+                <option value="growth">04 // Core Web Vitals & Growth SEO</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-mono text-[#0B0B0D] uppercase mb-1 font-bold">
+                Project Scope / Requirements *
               </label>
               <textarea
                 required
                 name="message"
                 rows={4}
-                placeholder="Describe your current infrastructure, goals, and target timeline..."
-                className="w-full p-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#B80357]"
+                placeholder="Tell us about your project, timeline, tech stack preferences, and goals..."
+                className="w-full p-4 border border-[#E7E7E7] text-sm text-[#0B0B0D] focus:outline-none focus:border-[#0052FF]"
               />
             </div>
 
             <Button variant="primary" size="lg" className="w-full" isLoading={isSubmitting}>
-              Submit Technical Inquiry &rarr;
+              Submit Inquiry & Request Discovery &rarr;
             </Button>
           </form>
         </Card>

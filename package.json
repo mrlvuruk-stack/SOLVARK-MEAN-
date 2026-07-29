@@ -13,8 +13,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
-    "@react-three/drei": "^9.121.0",
-    "@react-three/fiber": "^8.17.14",
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.48.1",
     "@tanstack/react-table": "^8.20.6",

@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, #0052FF 0%, #FF2A85 100%);
 }
 
-.bg-[#0052FF] {
+.bg-brand-blue {
   background-color: #0052FF !important;
 }
 

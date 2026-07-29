@@ -76,12 +76,12 @@ export default function GalleryPage() {
     <div className="pt-32 pb-20 max-w-7xl mx-auto px-6 space-y-16 relative z-10 bg-white text-[#0B0B0D]">
       {/* Page Header */}
       <div className="space-y-6 max-w-4xl">
-        <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-[#F8F8FA] border border-[#E7E7E7] text-xs font-mono text-[#0B0B0D]">
-          <span className="w-2 h-2 bg-[#B80357]" />
+        <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-[#F8F8FA] border border-[#E7E7E7] text-xs font-mono text-[#0052FF] font-bold">
+          <span className="w-2 h-2 bg-[#FF2A85]" />
           SOLVARK ARCHITECTURE GALLERY // VISUAL ASSETS
         </div>
         <h1 className="text-4xl sm:text-6xl font-bold tracking-tight font-heading leading-tight text-[#0B0B0D]">
-          Engineering Diagrams, UI Mockups & System Blueprints
+          Engineering Diagrams, UI Mockups & <span className="text-gradient-blue-pink">System Blueprints</span>
         </h1>
         <p className="text-[#444444] text-lg font-normal leading-relaxed max-w-2xl font-sans">
           A high-fidelity gallery showcasing our system architecture diagrams, SaaS user interfaces, and brand engineering design tokens.
@@ -94,10 +94,10 @@ export default function GalleryPage() {
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-2 text-xs font-mono transition-colors border ${
+            className={`px-4 py-2 text-xs font-mono transition-colors border cursor-pointer ${
               selectedCategory === cat
-                ? 'bg-[#B80357] text-white border-[#B80357]'
-                : 'bg-[#F8F8FA] text-[#0B0B0D] border-[#E7E7E7] hover:border-[#B80357]'
+                ? 'bg-[#0052FF] text-white border-[#0052FF] font-bold'
+                : 'bg-[#F8F8FA] text-[#0B0B0D] border-[#E7E7E7] hover:border-[#FF2A85]'
             }`}
           >
             {cat}

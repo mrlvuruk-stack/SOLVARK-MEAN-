@@ -62,12 +62,12 @@ export default function BlogPage() {
     <div className="pt-32 pb-20 max-w-7xl mx-auto px-6 space-y-16 relative z-10 bg-white text-[#0B0B0D]">
       {/* Header */}
       <div className="space-y-6 max-w-4xl">
-        <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-[#F8F8FA] border border-[#E7E7E7] text-xs font-mono text-[#0B0B0D]">
-          <span className="w-2 h-2 bg-[#B80357]" />
+        <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-[#F8F8FA] border border-[#E7E7E7] text-xs font-mono text-[#0052FF] font-bold">
+          <span className="w-2 h-2 bg-[#FF2A85]" />
           SOLVARK JOURNAL // TECHNICAL INSIGHTS
         </div>
         <h1 className="text-4xl sm:text-6xl font-bold tracking-tight font-heading leading-tight text-[#0B0B0D]">
-          Software Engineering, Architecture & AI Insights
+          Software Engineering, Architecture & <span className="text-gradient-blue-pink">AI Insights</span>
         </h1>
         <p className="text-[#444444] text-lg font-normal leading-relaxed max-w-2xl font-sans">
           Deep-dive technical articles, cloud infrastructure guides, and engineering patterns published by our principal software architects.
@@ -83,10 +83,10 @@ export default function BlogPage() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 text-xs font-mono transition-colors border ${
+                className={`px-4 py-2 text-xs font-mono transition-colors border cursor-pointer ${
                   selectedCategory === cat
-                    ? 'bg-[#B80357] text-white border-[#B80357]'
-                    : 'bg-[#F8F8FA] text-[#0B0B0D] border-[#E7E7E7] hover:border-[#B80357]'
+                    ? 'bg-[#0052FF] text-white border-[#0052FF] font-bold'
+                    : 'bg-[#F8F8FA] text-[#0B0B0D] border-[#E7E7E7] hover:border-[#FF2A85]'
                 }`}
               >
                 {cat}

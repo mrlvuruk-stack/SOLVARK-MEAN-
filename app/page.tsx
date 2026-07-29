@@ -754,7 +754,7 @@ export default function HomePage() {
               </Button>
             </Link>
             <Link href="/resources">
-              <Button variant="outline" size="lg" className="border-zinc-700 text-white hover:bg-white/10">
+              <Button variant="darkOutline" size="lg">
                 Browse Architecture Specs
               </Button>
             </Link>

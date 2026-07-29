@@ -38,7 +38,7 @@ export function AdminSidebar() {
     <aside className="w-64 border-r border-zinc-800 bg-[#0B0B0D] p-6 flex flex-col justify-between hidden md:flex min-h-screen">
       <div className="space-y-8">
         <Link href="/admin/dashboard" className="flex items-center gap-3">
-          <SolvarkLogo size="sm" isDarkBg={true} />
+          <SolvarkLogo size="sm" />
         </Link>
 
         <nav className="space-y-1">

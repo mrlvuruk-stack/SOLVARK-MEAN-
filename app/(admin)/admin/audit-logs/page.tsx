@@ -1,4 +1,3 @@
-import { Card } from '@/components/ui/card';
 import { createServerSupabaseClient } from '@/lib/supabase/server';
 
 export default async function AdminAuditLogsPage() {
@@ -21,39 +20,50 @@ export default async function AdminAuditLogsPage() {
       entity_type: 'projects',
       created_at: new Date().toISOString(),
     },
+    {
+      id: '3',
+      action: 'AUTHENTICATE_ADMIN',
+      entity_type: 'auth_users',
+      created_at: new Date().toISOString(),
+    },
   ];
 
   return (
-    <div className="p-8 space-y-8 max-w-7xl mx-auto">
+    <div className="p-8 space-y-8 max-w-7xl mx-auto text-white">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">Security & Audit Trail Logs</h1>
-        <p className="text-sm text-zinc-400">
-          Immutable history of all administrative actions, CMS edits, logins, and media mutations.
+        <div className="text-xs font-mono text-[#0052FF] font-bold uppercase tracking-widest mb-1">
+          SECURITY & COMPLIANCE
+        </div>
+        <h1 className="text-3xl font-bold font-heading tracking-tight text-white">
+          Audit Trail & Security Logs
+        </h1>
+        <p className="text-sm text-zinc-400 font-sans mt-1">
+          Immutable history of all administrative actions, CMS edits, user logins, and database mutations.
         </p>
       </div>
 
-      <Card variant="solid" className="border-zinc-800 p-0 overflow-hidden">
+      <div className="bg-zinc-900 border border-zinc-800 overflow-hidden">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b border-zinc-800 bg-zinc-950 text-xs font-mono text-zinc-400">
-              <th className="p-4">Action</th>
-              <th className="p-4">Entity Type</th>
-              <th className="p-4">Timestamp</th>
+              <th className="p-4">ACTION TYPE</th>
+              <th className="p-4">ENTITY TARGET</th>
+              <th className="p-4">TIMESTAMP</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-zinc-800 text-xs font-mono">
             {auditList.map((log) => (
-              <tr key={log.id} className="hover:bg-white/5 transition-colors">
-                <td className="p-4 text-indigo-400 font-bold">{log.action}</td>
-                <td className="p-4 text-zinc-300">{log.entity_type}</td>
-                <td className="p-4 text-zinc-500">
+              <tr key={log.id} className="hover:bg-zinc-800/50 transition-colors">
+                <td className="p-4 text-[#FF2A85] font-bold">{log.action}</td>
+                <td className="p-4 text-zinc-200">{log.entity_type}</td>
+                <td className="p-4 text-zinc-400">
                   {new Date(log.created_at).toLocaleString()}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-      </Card>
+      </div>
     </div>
   );
 }

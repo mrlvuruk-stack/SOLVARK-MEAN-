@@ -4,6 +4,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { SolvarkLogo } from '@/components/ui/logo';
 import {
   LayoutDashboard,
   FolderKanban,
@@ -19,8 +20,8 @@ import {
 
 const ADMIN_NAV = [
   { label: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
-  { label: 'Portfolio', href: '/admin/projects', icon: FolderKanban },
-  { label: 'Services', href: '/admin/services', icon: Wrench },
+  { label: 'Portfolio Manager', href: '/admin/projects', icon: FolderKanban },
+  { label: 'Services Manager', href: '/admin/services', icon: Wrench },
   { label: 'Contact Leads', href: '/admin/leads', icon: Inbox },
   { label: 'Media Library', href: '/admin/media', icon: Image },
   { label: 'SEO Manager', href: '/admin/seo', icon: Globe },
@@ -34,16 +35,10 @@ export function AdminSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 border-r border-white/10 bg-zinc-950 p-6 flex flex-col justify-between hidden md:flex min-h-screen">
+    <aside className="w-64 border-r border-zinc-800 bg-[#0B0B0D] p-6 flex flex-col justify-between hidden md:flex min-h-screen">
       <div className="space-y-8">
         <Link href="/admin/dashboard" className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-600/30">
-            S
-          </div>
-          <div>
-            <div className="font-bold text-sm text-white">Solvark Admin</div>
-            <div className="text-[10px] text-zinc-500 font-mono">v1.0-PRODUCTION</div>
-          </div>
+          <SolvarkLogo size="sm" isDarkBg={true} />
         </Link>
 
         <nav className="space-y-1">
@@ -55,10 +50,10 @@ export function AdminSidebar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-medium transition-all',
+                  'flex items-center gap-3 px-3 py-2.5 rounded-none text-xs font-mono transition-all',
                   isActive
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20 font-semibold'
-                    : 'text-zinc-400 hover:text-white hover:bg-white/5'
+                    ? 'bg-gradient-to-r from-[#0052FF] to-[#FF2A85] text-white font-bold shadow-md'
+                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900 border border-transparent hover:border-zinc-800'
                 )}
               >
                 <Icon className="w-4 h-4" />
@@ -69,8 +64,9 @@ export function AdminSidebar() {
         </nav>
       </div>
 
-      <div className="pt-6 border-t border-white/10 text-xs text-zinc-500 font-mono">
-        Status: <span className="text-emerald-400 font-semibold">● Live Systems</span>
+      <div className="pt-6 border-t border-zinc-800 text-[11px] text-zinc-400 font-mono space-y-1">
+        <div>SYSTEM STATUS: <span className="text-emerald-400 font-bold">● ONLINE</span></div>
+        <div className="text-[10px] text-zinc-500">SOLVARK CORE v2.5</div>
       </div>
     </aside>
   );

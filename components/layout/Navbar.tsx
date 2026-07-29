@@ -2,12 +2,13 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { SITE_CONFIG, NAVIGATION_LINKS } from '@/lib/constants';
+import { usePathname } from 'next/navigation';
+import { NAVIGATION_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
-
 import { SolvarkLogo } from '@/components/ui/logo';
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
@@ -17,6 +18,11 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Do NOT render public navbar on admin panel or login pages
+  if (pathname.startsWith('/admin') || pathname.startsWith('/login')) {
+    return null;
+  }
 
   return (
     <header
@@ -30,7 +36,6 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <SolvarkLogo size="md" variant="light" />
         </Link>
-
 
         <nav className="hidden md:flex items-center gap-8">
           {NAVIGATION_LINKS.map((link) => (

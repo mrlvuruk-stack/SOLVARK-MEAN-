@@ -1,8 +1,19 @@
+'use client';
+
+import * as React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { SITE_CONFIG, NAVIGATION_LINKS, FOOTER_LEGAL_LINKS } from '@/lib/constants';
 import { SolvarkLogo } from '@/components/ui/logo';
 
 export function Footer() {
+  const pathname = usePathname();
+
+  // Do NOT render public footer on admin panel or login pages
+  if (pathname.startsWith('/admin') || pathname.startsWith('/login')) {
+    return null;
+  }
+
   return (
     <footer className="bg-[#0B0B0D] text-white border-t border-zinc-800 pt-20 pb-12 font-sans relative z-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-zinc-800">
@@ -14,7 +25,6 @@ export function Footer() {
             We engineer digital systems that help businesses launch faster, operate smarter, and scale with confidence.
           </p>
         </div>
-
 
         <div className="space-y-3">
           <div className="text-xs font-mono uppercase tracking-widest text-[#FF2A85] font-bold">Navigation</div>

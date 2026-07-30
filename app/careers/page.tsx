@@ -22,6 +22,7 @@ export default function CareersPage() {
     role: '',
     experienceYears: '',
     portfolio: '',
+    resumeUrl: '',
     coverNote: '',
   });
   const [submitted, setSubmitted] = React.useState(false);
@@ -49,7 +50,7 @@ export default function CareersPage() {
     setSubmitted(true);
     setTimeout(() => {
       setSelectedJob(null);
-      setForm({ fullName: '', email: '', phone: '', role: '', experienceYears: '', portfolio: '', coverNote: '' });
+      setForm({ fullName: '', email: '', phone: '', role: '', experienceYears: '', portfolio: '', resumeUrl: '', coverNote: '' });
       setSubmitted(false);
     }, 2000);
   }
@@ -177,16 +178,28 @@ export default function CareersPage() {
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-zinc-400 font-mono uppercase mb-1 font-semibold">Portfolio / GitHub / LinkedIn Link *</label>
-                  <input
-                    required
-                    type="url"
-                    placeholder="https://github.com/yourusername"
-                    value={form.portfolio}
-                    onChange={(e) => setForm({ ...form, portfolio: e.target.value })}
-                    className="w-full h-11 px-4 bg-zinc-950 border border-zinc-800 text-sm text-white rounded-lg focus:outline-none focus:border-[#0052FF]"
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-zinc-400 font-mono uppercase mb-1 font-semibold">Portfolio / GitHub / LinkedIn Link *</label>
+                    <input
+                      required
+                      type="url"
+                      placeholder="https://github.com/yourusername"
+                      value={form.portfolio}
+                      onChange={(e) => setForm({ ...form, portfolio: e.target.value })}
+                      className="w-full h-11 px-4 bg-zinc-950 border border-zinc-800 text-sm text-white rounded-lg focus:outline-none focus:border-[#0052FF]"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-zinc-400 font-mono uppercase mb-1 font-semibold">Resume / CV (Drive Link or PDF) *</label>
+                    <input
+                      required
+                      type="text"
+                      placeholder="Upload Resume Link or File URL"
+                      onChange={(e) => setForm({ ...form, resumeUrl: e.target.value })}
+                      className="w-full h-11 px-4 bg-zinc-950 border border-zinc-800 text-sm text-white rounded-lg focus:outline-none focus:border-[#0052FF]"
+                    />
+                  </div>
                 </div>
 
                 <div>

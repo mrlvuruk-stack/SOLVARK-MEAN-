@@ -6,18 +6,31 @@ import { usePathname } from 'next/navigation';
 import { NAVIGATION_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { SolvarkLogo } from '@/components/ui/logo';
+import { User, LogIn } from 'lucide-react';
 
 export function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [clientUser, setClientUser] = React.useState<{ fullName: string; email: string } | null>(null);
 
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
+
+    // Check signed in client user
+    const auth = localStorage.getItem('solvark_client_auth');
+    if (auth) {
+      try {
+        setClientUser(JSON.parse(auth));
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
   // Do NOT render public navbar on admin panel, login, or client portal pages
   if (pathname.startsWith('/admin') || pathname.startsWith('/login') || pathname.startsWith('/client')) {
@@ -49,7 +62,27 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          {clientUser ? (
+            <Link
+              href="/client/dashboard"
+              className="flex items-center gap-2 px-3.5 py-1.5 bg-[#F8F8FA] border border-[#0052FF]/30 rounded-lg hover:border-[#0052FF] transition-all group"
+            >
+              <div className="w-6 h-6 rounded-full bg-[#0052FF] text-white flex items-center justify-center text-[10px] font-bold">
+                {clientUser.fullName.charAt(0).toUpperCase()}
+              </div>
+              <span className="text-xs font-bold text-[#0B0B0D] group-hover:text-[#0052FF]">
+                {clientUser.fullName.split(' ')[0]} (Profile & Dashboard)
+              </span>
+            </Link>
+          ) : (
+            <Link href="/client/dashboard">
+              <Button variant="outline" size="sm" className="flex items-center gap-1 text-xs">
+                <LogIn className="w-3.5 h-3.5" /> Sign In / Profile
+              </Button>
+            </Link>
+          )}
+
           <Link href="/contact">
             <Button variant="primary" size="sm">
               Contact Us &rarr;

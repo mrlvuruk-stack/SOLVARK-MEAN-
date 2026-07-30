@@ -68,7 +68,7 @@ export default function LoginPage() {
             />
           </div>
 
-          <Button variant="primary" size="lg" className="w-full" isLoading={isSubmitting}>
+          <Button variant="primary" size="lg" className="w-full">
             Authenticate & Open Dashboard &rarr;
           </Button>
         </form>

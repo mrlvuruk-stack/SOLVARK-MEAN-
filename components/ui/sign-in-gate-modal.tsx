@@ -36,8 +36,8 @@ export function SignInGateModal() {
     setIsSubmitted(true);
     setTimeout(() => {
       setIsOpen(false);
-      window.location.href = '/client/dashboard';
-    }, 1200);
+      // Stay on current page so user can explore the entire website freely!
+    }, 1500);
   }
 
   if (!isOpen) return null;
@@ -74,8 +74,8 @@ export function SignInGateModal() {
         {isSubmitted ? (
           <div className="p-6 bg-emerald-950/40 border border-emerald-800 text-center space-y-3">
             <CheckCircle className="w-10 h-10 text-emerald-400 mx-auto animate-bounce" />
-            <div className="text-base font-bold text-white font-heading">Access Granted!</div>
-            <p className="text-xs text-zinc-300 font-mono">Redirecting to your Solvark Client Dashboard...</p>
+            <div className="text-base font-bold text-white font-heading">Sign-In Successful!</div>
+            <p className="text-xs text-zinc-300 font-mono">Full Website Access Unlocked. Enjoy exploring Solvark!</p>
           </div>
         ) : (
           <form onSubmit={handleRegister} className="space-y-4 font-sans text-xs">

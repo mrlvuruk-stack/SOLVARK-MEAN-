@@ -24,6 +24,9 @@ export function Footer() {
           <p className="text-zinc-400 text-sm max-w-sm leading-relaxed">
             We engineer digital systems that help businesses launch faster, operate smarter, and scale with confidence.
           </p>
+          <p className="text-xs text-zinc-500 font-mono">
+            📍 Phoenix Township, Dewas Naka, Indore, Madhya Pradesh, India
+          </p>
         </div>
 
         <div className="space-y-3">

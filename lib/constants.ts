@@ -57,13 +57,18 @@ export const NAVIGATION_LINKS = [
   { label: 'Industries', href: '/industries' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Resources', href: '/resources' },
   { label: 'About', href: '/about' },
   { label: 'Careers', href: '/careers' },
   { label: 'Internship', href: '/internship' },
   { label: 'Contact', href: '/contact' },
 ];
+
+export const CONTACT_INFO = {
+  address: 'Phoenix Township, Dewas Naka, Indore, Madhya Pradesh, India',
+  email: 'contact@solvark.com',
+  supportEmail: 'support@solvark.com',
+  phone: '+91 98765 43210',
+};
 
 export const FOOTER_LEGAL_LINKS = [
   { label: 'Privacy Policy', href: '/privacy' },

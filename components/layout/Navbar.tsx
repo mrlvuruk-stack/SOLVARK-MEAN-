@@ -52,7 +52,7 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <Link href="/contact">
             <Button variant="primary" size="sm">
-              Initiate Project &rarr;
+              Contact Us &rarr;
             </Button>
           </Link>
         </div>

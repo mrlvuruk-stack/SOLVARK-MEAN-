@@ -65,8 +65,8 @@ export const NAVIGATION_LINKS = [
 
 export const CONTACT_INFO = {
   address: 'Phoenix Township, Dewas Naka, Indore, Madhya Pradesh, India',
-  email: 'contact@solvark.com',
-  supportEmail: 'support@solvark.com',
+  email: 'solvark.in@gmail.com',
+  supportEmail: 'solvark.in@outlook.com',
   phone: '+91 98765 43210',
 };
 

@@ -64,7 +64,7 @@ export default function ContactPage() {
 
           <div className="space-y-2 text-xs text-[#222222] font-mono font-semibold pt-2">
             <div>📍 Headquarters: Phoenix Township, Dewas Naka, Indore, Madhya Pradesh, India</div>
-            <div>📧 Direct Email: contact@solvark.com</div>
+            <div>📧 Email: solvark.in@gmail.com // solvark.in@outlook.com</div>
             <div>🔒 Confidentiality: Strict NDA provided upon request</div>
           </div>
         </div>

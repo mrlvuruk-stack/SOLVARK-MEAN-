@@ -37,8 +37,8 @@ export function AdminHeader() {
             <User className="w-4 h-4" />
           </div>
           <div>
-            <div className="text-xs font-bold text-white font-heading">Super Admin</div>
-            <div className="text-[10px] text-zinc-400 font-mono">admin@solvark.com</div>
+            <div className="text-xs font-bold text-white">System Admin</div>
+            <div className="text-[10px] text-zinc-400 font-mono">solvark.in@gmail.com</div>
           </div>
         </div>
       </div>

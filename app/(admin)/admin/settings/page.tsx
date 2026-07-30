@@ -32,7 +32,7 @@ export default function AdminSettingsPage() {
             <label className="block text-zinc-300 mb-1 font-mono uppercase font-bold">Primary Contact Email</label>
             <input
               type="email"
-              defaultValue="contact@solvark.com"
+              defaultValue="solvark.in@gmail.com"
               className="w-full h-11 px-4 bg-zinc-950 border border-zinc-800 text-white font-medium focus:outline-none focus:border-[#0052FF]"
             />
           </div>

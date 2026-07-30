@@ -78,7 +78,7 @@ export default function LoginPage() {
             &larr; Return to Public Website
           </Link>
         </div>
-      </Card>
+      </div>
     </div>
   );
 }

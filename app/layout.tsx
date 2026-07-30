@@ -6,6 +6,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { SkipLink } from '@/components/ui/skip-link';
 import { BackgroundMesh } from '@/components/marketing/BackgroundMesh';
+import { SignInGateModal } from '@/components/ui/sign-in-gate-modal';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content" className="min-h-screen relative z-10">{children}</main>
         <Footer />
+        <SignInGateModal />
       </body>
     </html>
   );

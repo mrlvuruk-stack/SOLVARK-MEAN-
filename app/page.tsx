@@ -7,7 +7,6 @@ import {
   TICKER_BADGES,
   SOLVARK_DNA_PILLARS,
   ENGINEERING_PHILOSOPHIES,
-  INDUSTRIES_WE_EMPOWER,
 } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';

@@ -16,12 +16,18 @@ import {
   ShieldAlert,
   Settings,
   Activity,
+  FileSignature,
+  CreditCard,
+  GraduationCap,
 } from 'lucide-react';
 
 const ADMIN_NAV = [
   { label: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
   { label: 'Portfolio Manager', href: '/admin/projects', icon: FolderKanban },
   { label: 'Services Manager', href: '/admin/services', icon: Wrench },
+  { label: 'Agreements', href: '/admin/agreements', icon: FileSignature },
+  { label: 'Billing & Invoices', href: '/admin/billing', icon: CreditCard },
+  { label: 'Internships', href: '/admin/internships', icon: GraduationCap },
   { label: 'Contact Leads', href: '/admin/leads', icon: Inbox },
   { label: 'Media Library', href: '/admin/media', icon: Image },
   { label: 'SEO Manager', href: '/admin/seo', icon: Globe },

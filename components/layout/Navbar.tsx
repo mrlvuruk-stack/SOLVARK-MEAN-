@@ -19,8 +19,8 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Do NOT render public navbar on admin panel or login pages
-  if (pathname.startsWith('/admin') || pathname.startsWith('/login')) {
+  // Do NOT render public navbar on admin panel, login, or client portal pages
+  if (pathname.startsWith('/admin') || pathname.startsWith('/login') || pathname.startsWith('/client')) {
     return null;
   }
 

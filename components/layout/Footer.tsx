@@ -9,8 +9,8 @@ import { SolvarkLogo } from '@/components/ui/logo';
 export function Footer() {
   const pathname = usePathname();
 
-  // Do NOT render public footer on admin panel or login pages
-  if (pathname.startsWith('/admin') || pathname.startsWith('/login')) {
+  // Do NOT render public footer on admin panel, login, or client portal pages
+  if (pathname.startsWith('/admin') || pathname.startsWith('/login') || pathname.startsWith('/client')) {
     return null;
   }
 

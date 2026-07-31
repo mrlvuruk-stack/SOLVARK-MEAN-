@@ -34,15 +34,15 @@ const TRANSFORMATION_TABS = [
     id: 'ecommerce-retail',
     label: 'E-Commerce & Local Shops',
     icon: '🛒',
-    headline: 'Zara-Grade Online Storefronts for Local Shops & Brands.',
-    description: 'Transform your retail shop into an ultra-luxurious online store with instant 1-click checkout, mobile payment gateways (UPI/PayU), and instant WhatsApp order alerts.',
+    headline: 'High-Converting Online Storefronts for Local Shops & Brands.',
+    description: 'Transform your retail shop into a modern, high-converting online store with instant 1-click checkout, mobile payment gateways (UPI/PayU), and instant WhatsApp order alerts.',
     metrics: [
       { label: 'CONVERSION SPEED', value: 'Instant 1-Click Checkout' },
       { label: 'MOBILE SPEED', value: '100/100 Google Lighthouse' },
       { label: 'PAYMENT INTEGRATION', value: 'UPI / Cards / PayU' },
     ],
     features: [
-      'Luxury Responsive Shopping Storefronts',
+      'High-Converting Responsive Shopping Storefronts',
       'Inventory & Stock Management System',
       'Direct WhatsApp Order Notification Alerts',
       'Secure Online Payments (UPI, Credit/Debit Cards)',
@@ -179,28 +179,28 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Hero Copy Column */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-[#0B0B0D] text-white border border-amber-400/40 rounded-full shadow-lg">
-            <Crown className="w-4 h-4 text-amber-400 animate-pulse" />
-            <span className="text-xs font-mono font-bold text-amber-300 uppercase tracking-widest">
-              ZARA-GRADE LUXURY TECH • AT BUDGET RATES
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-[#0B0B0D] text-white border border-[#0052FF]/40 rounded-full shadow-lg">
+            <Sparkles className="w-4 h-4 text-[#FF2A85] animate-pulse" />
+            <span className="text-xs font-mono font-bold text-zinc-200 uppercase tracking-widest">
+              PREMIUM DIGITAL ENGINEERING • BUDGET RATES
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight font-heading leading-[1.08] text-[#0B0B0D]">
-            Luxury-Grade Digital Systems at{' '}
+            Enterprise-Grade Digital Systems at{' '}
             <span className="bg-gradient-to-r from-[#0052FF] via-[#FF2A85] to-[#8B5CF6] bg-clip-text text-transparent underline decoration-[#FF2A85]/30">
-              Unbeatable Local Rates
+              Accessible Local Rates
             </span>.
           </h1>
 
           <p className="text-base sm:text-lg text-[#333333] font-normal leading-relaxed max-w-2xl font-sans">
-            We deliver haute-couture, ultra-premium web platforms, School ERPs with Live GPS, E-Commerce stores, and custom executable software—crafted to perfection without expensive price tags.
+            We build high-performance web platforms, School ERPs with Live GPS, E-Commerce stores, and custom executable software—engineered with 100/100 speed and precision for small businesses, schools, and NGOs.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link href="/services">
               <Button variant="primary" size="lg" className="shadow-xl shadow-[#0052FF]/25 font-bold flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-amber-300" /> Explore All 11 Luxury Services &rarr;
+                <Sparkles className="w-4 h-4 text-amber-300" /> Explore All 11 Services &rarr;
               </Button>
             </Link>
             <Link href="/portfolio">
@@ -214,7 +214,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-[#E7E7E7]">
             <div className="p-4 bg-[#F8F8FA] border border-[#E7E7E7] rounded-xl space-y-1 blueprint-border">
               <div className="text-2xl sm:text-3xl font-bold font-heading text-[#0052FF]">50+</div>
-              <div className="text-[11px] font-mono text-[#555555] font-semibold">Luxury Systems Built</div>
+              <div className="text-[11px] font-mono text-[#555555] font-semibold">Custom Systems Built</div>
             </div>
             <div className="p-4 bg-[#F8F8FA] border border-[#E7E7E7] rounded-xl space-y-1 blueprint-border">
               <div className="text-2xl sm:text-3xl font-bold font-heading text-[#FF2A85]">5 Portals</div>
@@ -232,7 +232,7 @@ export default function HomePage() {
         </div>
 
         {/* Right Column: Ultra-Luxurious Holographic Visual Card Deck */}
-        <div className="lg:col-span-5 bg-[#050507] border-2 border-amber-400/40 p-8 rounded-3xl text-white shadow-2xl relative space-y-6 overflow-hidden">
+        <div className="lg:col-span-5 bg-[#050507] border-2 border-[#0052FF]/40 p-8 rounded-3xl text-white shadow-2xl relative space-y-6 overflow-hidden">
           {/* Ambient Lighting Spotlights */}
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#0052FF]/30 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-[#FF2A85]/25 rounded-full blur-3xl pointer-events-none" />
@@ -240,11 +240,11 @@ export default function HomePage() {
           {/* Top Luxury Header */}
           <div className="flex items-center justify-between border-b border-zinc-800/80 pb-4 relative z-10">
             <div className="flex items-center gap-2">
-              <Crown className="w-4 h-4 text-amber-400 animate-bounce" />
-              <span className="text-xs font-mono text-amber-300 font-bold uppercase tracking-wider">SOLVARK LUXURY SUITE</span>
+              <Sparkles className="w-4 h-4 text-[#FF2A85] animate-bounce" />
+              <span className="text-xs font-mono text-zinc-200 font-bold uppercase tracking-wider">SOLVARK PLATFORM SUITE</span>
             </div>
-            <span className="text-[10px] font-mono px-2.5 py-1 bg-amber-950/60 border border-amber-700/60 text-amber-300 font-bold rounded-full">
-              ★ PRO MAX
+            <span className="text-[10px] font-mono px-2.5 py-1 bg-blue-950/60 border border-blue-700/60 text-[#0052FF] font-bold rounded-full">
+              ★ PRO ENGINE
             </span>
           </div>
 

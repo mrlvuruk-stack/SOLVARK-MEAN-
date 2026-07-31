@@ -62,27 +62,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          {clientUser ? (
-            <Link
-              href="/client/dashboard"
-              className="flex items-center gap-2 px-3.5 py-1.5 bg-[#F8F8FA] border border-[#0052FF]/30 rounded-lg hover:border-[#0052FF] transition-all group"
-            >
-              <div className="w-6 h-6 rounded-full bg-[#0052FF] text-white flex items-center justify-center text-[10px] font-bold">
-                {clientUser.fullName.charAt(0).toUpperCase()}
-              </div>
-              <span className="text-xs font-bold text-[#0B0B0D] group-hover:text-[#0052FF]">
-                {clientUser.fullName.split(' ')[0]} (Profile & Dashboard)
-              </span>
-            </Link>
-          ) : (
-            <Link href="/client/dashboard">
-              <Button variant="outline" size="sm" className="flex items-center gap-1 text-xs">
-                <LogIn className="w-3.5 h-3.5" /> Sign In / Profile
-              </Button>
-            </Link>
-          )}
-
+        <div className="flex items-center gap-4">
           <Link href="/contact">
             <Button variant="primary" size="sm">
               Contact Us &rarr;
